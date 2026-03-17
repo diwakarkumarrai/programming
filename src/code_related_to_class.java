@@ -213,6 +213,7 @@ public class code_related_to_class {
 
  */
 
+/*
 //use constructor to set the salary of employee
 class Employee {
 
@@ -240,6 +241,85 @@ public class code_related_to_class {
         System.out.println(Kittu.name);
         System.out.println(Kittu.id);
         System.out.println(Kittu.salary);
+
+    }
+}
+
+ */
+
+// Access modifier question
+
+import java.util.Scanner;
+
+/*
+//create a class  Cylinder and use getter and setter to set it radius and height
+
+class Cylinder{
+    private float height;
+    private float radius;
+
+    public void setRadius(float x ){
+        radius =x;
+    }
+
+    public float getRadius(){
+        return radius;
+    }
+
+    public void setHeight(float x ){
+        height =x;
+    }
+
+    public float getHeight(){
+        return height;
+    }
+//Surface Area (SA) = 2πr² + 2πrh
+//Volume (V) = πr²h
+    public float volume(){
+        return (3.14f*radius*radius*height);
+    }
+
+    public float surfaceArea(){
+        return ((2f*3.14f*radius*radius) + (2f*3.14f*radius*height));
+    }
+}
+public class code_related_to_class {
+    public static void main(String[] args) {
+        Cylinder c = new Cylinder();
+        c.setHeight(34.5f);
+        c.setRadius(45.67f);
+        System.out.println("The height of the cylinder is "+c.getHeight());
+        System.out.println("The Radius of the cylinder is "+c.getRadius());
+
+
+        //use above program and calculate surface area and volume of Cylinder
+        System.out.println("The surface area of the cylinder is "+c.surfaceArea());
+        System.out.println("The volume of the cylinder is "+c.volume());
+
+    }
+}
+
+ */
+//using constructor create a class and set  and get it radius and height
+class Cylinder{
+    private float  Height;
+    private float Radius;
+
+    public Cylinder(float r, float h ){
+       Radius = r;
+       Height = h;
+    }
+
+    public void display(){
+        System.out.println("radius is "+Radius);
+        System.out.println("height is "+Height);
+
+    }
+}
+public class code_related_to_class {
+    public static void main(String[] args) {
+        Cylinder c= new Cylinder(3.14f,1.0f);
+        c.display();
 
     }
 }
