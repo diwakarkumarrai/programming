@@ -1,5 +1,8 @@
    import java.util.Scanner;
    public class practise_question {
+       public static void printName(String name){
+           System.out.println("Your name is: " + name);
+       }
        public static void main(String[] args) {
 /*
    //finding greatest and smallest number in an array
@@ -552,6 +555,7 @@ System.out.println("The greatest number among this arr is: "+max_number+" and th
 
             */
 
+           /*
 
            // Another code to shift all zeroes to the last position and this code is very sufficient
            Scanner sc = new Scanner(System.in);
@@ -578,8 +582,38 @@ System.out.println("The greatest number among this arr is: "+max_number+" and th
 
            }
 
+
+            */
+         //  printName("diwakar");
+
+           //print pattern like this
+           //* * * * *
+           //* * * *
+           //* * *
+           //* *
+           // *
+
+           // and the opposite of this pattern
+
+
+           //this code print the pattern which i have commented
+           for(int i = 0;i<6;i++){
+               for(int j =i;j<6;j++){
+                   System.out.print("* ");
+               }
+               System.out.println();
+           }
+
+           //this code print the opposite of the pattern which i have commented
+           for(int i = 0;i<6;i++){
+               for(int j =0;j<=i;j++){
+                   System.out.print("* ");
+               }
+               System.out.println();
+           }
+           }
        }
-   }
+
 
 
 
