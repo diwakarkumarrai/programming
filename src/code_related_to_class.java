@@ -174,6 +174,7 @@ public class code_related_to_class{
 
  */
 
+/*
 class Circlee {
     private float radius;
     private boolean count=false;
@@ -199,12 +200,46 @@ class Circlee {
         }
     }
 
+
 }
 public class code_related_to_class {
     public static void main(String[] args) {
         Circlee c =new Circlee();
         c.setRadius(-3f);
         System.out.println(c.getRadius());
+
+    }
+}
+
+ */
+
+//use constructor to set the salary of employee
+class Employee {
+
+    int id;
+    String name;
+    float salary;
+    public  Employee(String x,int y, float z){
+        name = x;
+        id = y;
+        salary = z;
+
+    }
+
+}
+public class code_related_to_class {
+    public static void main(String[] args) {
+        System.out.println("Welcome to the Programming World");
+
+        Employee Diwa = new Employee("Diwakar",2,978000f);
+        System.out.println(Diwa.name);
+        System.out.println(Diwa.id);
+        System.out.println(Diwa.salary);
+
+        Employee Kittu = new Employee("Utkarsh",1,8780000f);
+        System.out.println(Kittu.name);
+        System.out.println(Kittu.id);
+        System.out.println(Kittu.salary);
 
     }
 }
