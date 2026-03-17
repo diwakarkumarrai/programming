@@ -170,4 +170,45 @@ public class code_related_to_class{
 
 }
 
+
+
  */
+
+class Circlee {
+    private float radius;
+    private boolean count=false;
+
+    public void setRadius(float x) {
+        if (x > 0) {
+            count = true;
+            radius = x;
+
+        } else {
+            count = false;
+            System.out.println("Give a valid radius ");
+        }
+    }
+
+    public float getRadius() {
+        if (count) {
+            return radius;
+
+        } else {
+
+            return -1;
+        }
+    }
+
+}
+public class code_related_to_class {
+    public static void main(String[] args) {
+        Circlee c =new Circlee();
+        c.setRadius(-3f);
+        System.out.println(c.getRadius());
+
+    }
+}
+
+
+
+
