@@ -329,6 +329,7 @@ public class code_related_to_class {
 
  */
 
+/*
 //how constructor perform in inheritance
 class GrandFather {
     public GrandFather() {
@@ -368,3 +369,33 @@ public class code_related_to_class {
     }
 }
 
+
+ */
+
+
+//code to show method overriding
+
+class Human{
+    public void character(){
+        System.out.println("human can run");
+    }
+}
+
+class Child extends Human{
+    @Override
+    public void character(){
+        System.out.println("child can run");
+
+    }
+}
+
+public class code_related_to_class {
+    public static void main(String[] args) {
+        Human a = new Child();
+        //or
+        Child b = new Child();
+        a.character();//we can reference the subclass object with its parent class during inheritance
+        //or
+        b.character();
+    }
+}
