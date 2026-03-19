@@ -300,6 +300,8 @@ public class code_related_to_class {
 }
 
  */
+
+/*
 //using constructor create a class and set  and get it radius and height
 class Cylinder{
     private float  Height;
@@ -325,5 +327,44 @@ public class code_related_to_class {
 }
 
 
+ */
 
+//how constructor perform in inheritance
+class GrandFather {
+    public GrandFather() {
+        System.out.println("I am GRANDFATHER");
+    }
+
+    public GrandFather(int a) {
+        System.out.println("I am GRANDFATHER and my age is " + a);
+    }
+}
+
+class Father extends GrandFather{
+    public Father() {
+        System.out.println("I am FATHER");
+    }
+
+    public Father(int a , int b) {
+        super(a);
+        System.out.println("I am FATHER and my age is " + b);
+    }
+}
+
+class Child extends Father{
+    public Child() {
+        System.out.println("I am Child");
+    }
+
+    public Child(int a,int b, int c) {
+        super(a,b);
+        System.out.println("I am Child and my age is " + c);
+    }
+}
+
+public class code_related_to_class {
+    public static void main(String[] args) {
+        Child c1 = new Child(84,51,22);
+    }
+}
 

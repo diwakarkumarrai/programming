@@ -1,3 +1,4 @@
+/*
 import java.util.Random;
 import java.util.Scanner;
 class Game {
@@ -51,3 +52,6 @@ public class Guessing_number {
 }
 
 
+
+
+ */
