@@ -373,6 +373,8 @@ public class code_related_to_class {
  */
 
 
+/*
+
 //code to show method overriding
 
 class Human{
@@ -397,5 +399,48 @@ public class code_related_to_class {
         a.character();//we can reference the subclass object with its parent class during inheritance
         //or
         b.character();
+    }
+}
+
+ */
+
+// Code showing Dynamic Method Dispatch
+class GrandFather{
+    public void  Status(){
+        System.out.println("I am GrandFather");
+    }
+
+   public void Age(){
+        System.out.println("I am of 81");
+    }
+}
+
+class Father extends GrandFather{
+    @Override
+    public void Status(){
+        System.out.println("I am Father");
+    }
+
+    public void Work(){
+        System.out.println("I am Assistant Manager");
+    }
+}
+
+public class code_related_to_class {
+    public static void main(String[] args) {
+        GrandFather obj = new Father();
+        obj.Status();
+        obj.Age();
+        //obj.Work(); -- we can not call this method because the reference class is GrandFather , and it does not contain this method
+
+        //When we create obj of child class using reference of parent class then --->
+
+        //Only those methods can be called which are present in the reference class, but the execution depends on the object class.
+
+        //Java checks methods in 2 steps:
+        //Compile time → checks reference type
+        //Runtime → decides overridden method
+
+
     }
 }
