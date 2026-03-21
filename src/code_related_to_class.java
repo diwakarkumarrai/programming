@@ -451,6 +451,7 @@ public class code_related_to_class {
  */
 
 
+/*
 
 // code showing the abstract class and abstract methods
 abstract class Human{
@@ -546,3 +547,59 @@ public class code_related_to_class {
 //“Abstract methods must be overridden in subclass.”
 
 //in child class  when we extends the abstract class then we have to must override all the abstract method of that abstract class . if we do not do this then we get error.
+
+ */
+
+
+
+
+//Code to show the concepts of interfaces
+
+interface SmartPhone{
+    int cost = 45000;
+
+ void switchOn(int battery);
+ void switchOff(int battery);
+
+}
+
+interface Price{
+     void costRange();
+}
+
+class Samsung implements SmartPhone , Price {
+
+    public void switchOn(int battery){
+        System.out.println("Your phone has turned on and the battery level is "+battery+"%.");
+    };
+
+
+    public void switchOff(int battery){
+        System.out.println("The battery level is "+battery+"% and your phone is turning off.");
+    };
+
+
+    public void costRange(){
+        System.out.println("The price for this smartphone varies from 10000 to "+ cost);
+    };
+
+}
+public class code_related_to_class {
+    public static void main(String[] args) {
+         SmartPhone s1 =  new Samsung();
+        //s1.costRange; --> We can not do this because the reference is smartphone class in which costrange method is not present
+        s1.switchOn(67);
+        s1.switchOff(50);
+
+        Price s2 = new Samsung();
+        s2.costRange();
+        System.out.println();
+        //When using interface references, only the methods of that interface can be accessed, so separate references are needed to access methods of multiple interfaces.
+        //so create object using reference of the class which implements the interfaces
+
+        Samsung f22 = new Samsung();
+        f22.costRange();
+        f22.switchOn(89);
+        f22.switchOff(32);
+    }
+}
