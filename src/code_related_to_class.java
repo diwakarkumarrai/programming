@@ -601,7 +601,7 @@ public class code_related_to_class {
         f22.costRange();
         f22.switchOn(89);
         f22.switchOff(32);
-
+        System.out.println("THE END");
         //Interface is a blueprint of a class containing abstract methods.
         //All methods are public and abstract by default (before Java 8 concept).
         //Variables are public, static, and final (constants).
