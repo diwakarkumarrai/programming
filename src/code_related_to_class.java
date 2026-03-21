@@ -404,6 +404,8 @@ public class code_related_to_class {
 
  */
 
+/*
+
 // Code showing Dynamic Method Dispatch
 class GrandFather{
     public void  Status(){
@@ -444,3 +446,103 @@ public class code_related_to_class {
 
     }
 }
+
+
+ */
+
+
+
+// code showing the abstract class and abstract methods
+abstract class Human{
+    public void Greet(){
+        System.out.println("Hello! Namaste");
+    }
+    abstract public void Eat();
+    abstract public void Drink();
+
+}
+
+class GrandFather extends Human{
+
+    @Override
+ public void Eat(){
+     System.out.println("I am Grandfather and I have no teeth So I eat Only rice.");
+ }
+
+ @Override
+    public void Drink(){
+     System.out.println("I drink mango juice.");
+ }
+
+}
+
+class Father extends Human{
+
+    @Override
+    public void Eat(){
+        System.out.println("I am Father So I eat Chapati with multi variety of veggies.");
+    }
+
+    @Override
+    public void Drink(){
+        System.out.println("I drink water with Alcohol.");
+    }
+
+}
+
+abstract class Child extends Human{
+    abstract public void Do();
+}
+
+class Child1 extends Child{
+
+    @Override
+    public void Eat(){
+        System.out.println("I eat nothing because i have no teeth and my digestive system can only digest milk at this age.");
+    }
+
+    @Override
+    public void Drink(){
+        System.out.println("I drink only milk.");
+    }
+
+    @Override
+    public void Do(){
+        System.out.println("All i do is  disturb my lovely mother and then sleep.");
+    }
+}
+
+public class code_related_to_class {
+    public static void main(String[] args) {
+        Human h1 = new GrandFather();
+        h1.Greet();
+        System.out.print("\n");
+        h1.Eat();
+        h1.Drink();
+        System.out.print("\n");
+
+        h1 = new Father();
+        h1.Eat();
+        h1.Drink();
+        System.out.print("\n");
+
+        h1 =new Child1();
+        h1.Eat();
+        h1.Drink();
+       // h1.Do(); --> we can do this because reference is Human class and in human Do method is not defined.
+       // for this we have to create object using reference of Child class
+
+        Child h2 = new Child1();
+        h2.Do();
+    }
+}
+//Abstract class Can have both types of methods
+//Abstract methods (no body)
+//Normal methods (with body)
+//constructor
+
+//Abstract class Must be extended to use
+//“Abstract class cannot be instantiated but can be inherited.”
+//“Abstract methods must be overridden in subclass.”
+
+//in child class  when we extends the abstract class then we have to must override all the abstract method of that abstract class . if we do not do this then we get error.
