@@ -601,5 +601,16 @@ public class code_related_to_class {
         f22.costRange();
         f22.switchOn(89);
         f22.switchOff(32);
+
+        //Interface is a blueprint of a class containing abstract methods.
+        //All methods are public and abstract by default (before Java 8 concept).
+        //Variables are public, static, and final (constants).
+        //Interface cannot be instantiated (no object creation).
+        //A class uses implements keyword to inherit an interface.
+        //A class must implement all methods of the interface.
+        //Java supports multiple inheritance through interfaces.
+        //Interface can have default and static methods (Java 8+).
+        //Interface supports abstraction (100%).
+        //Interface helps in loose coupling and better design.gi
     }
 }
