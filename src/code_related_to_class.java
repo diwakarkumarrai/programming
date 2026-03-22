@@ -617,7 +617,7 @@ public class code_related_to_class {
 
  */
 
-
+/*
 
 //code of interface show the uses of default method and abstract method and private method
 
@@ -685,3 +685,237 @@ public class code_related_to_class {
 
     }
 }
+
+ */
+
+
+/*
+//create an abstract class pen with methods write() and refill() as abstract method
+
+abstract class Pen{
+    public void object(){
+        System.out.println("This is a pen.");
+    }
+   abstract void write();
+   abstract void refill();
+}
+
+class FountainPen extends Pen{
+    public void write(){
+        System.out.println("writing......");
+    }
+
+    public void refill(){
+        System.out.println("Refill it.");
+    }
+    public void changeNib(){
+        System.out.println("Please Change the Nib of Pen.");
+    }
+
+}
+public class code_related_to_class {
+    public static void main(String[] args) {
+        FountainPen p1 = new FountainPen();
+        p1.object();
+        p1.write();
+        p1.refill();
+        p1.changeNib();
+    }
+}
+
+ */
+
+/*
+
+//Create a class Monkey with jump() and bite() methods.
+//Create a class Human which inherits this Monkey class and implements BasicAnimal interface with eat() and sleep() methods.
+
+
+interface BasicAnimal{
+
+    void eat();
+    void sleep();
+
+}
+
+class Monkey{
+
+    void jump(){
+        System.out.println("i am jumping.");
+    }
+
+    void bite(){
+        System.out.println("I want to bite you, plz can i ?");
+    }
+}
+
+class Human extends Monkey implements BasicAnimal{
+
+    public void eat(){
+        System.out.println("I am eating.");
+    }
+
+    public void sleep(){
+        System.out.println("I am sleeping.");
+    }
+}
+
+public class code_related_to_class {
+    public static void main(String[] args) {
+        Human h1 = new Human();
+        h1.jump();
+        h1.eat();
+        h1.bite();
+        h1.sleep();
+    }
+}
+
+ */
+
+/*
+
+//Create a class Telephone with ring(), lift(), and disconnect() methods as abstract methods.
+//Create another class SmartTelephone and demonstrate polymorphism.
+
+abstract class TelePhone {
+
+    abstract void ring();
+    abstract void lift();
+    abstract void disconnect();
+
+}
+
+class SmartPhone extends TelePhone{
+
+    public void ring(){
+        System.out.println("phone is ringing.");
+    }
+
+     public void lift(){
+         System.out.println("Pick up the phone.");
+     }
+
+     public void disconnect(){
+         System.out.println("Call is disconnected.");
+     }
+
+    public void camera(){
+        System.out.println("Camera is opened , plz click some photo.");
+    }
+}
+
+public class code_related_to_class {
+    public static void main(String[] args) {
+        TelePhone s1 = new SmartPhone();//polymorphism
+        s1.ring();
+        s1.lift();
+        s1.disconnect();
+
+       // s1.camera(); -->Throws error because reference is telephone class in which camera method is not present.
+    }
+}
+
+ */
+
+
+/*
+
+
+//Create a class Monkey with jump() and bite() methods.
+//Create a class Human which inherits this Monkey class and implements BasicAnimal interface with eat() and sleep() methods.
+//Demonstrate polymorphism using Monkey class
+
+interface BasicAnimal{
+
+    void eat();
+    void sleep();
+
+}
+
+class Monkey{
+
+    void jump(){
+        System.out.println("i am jumping.");
+    }
+
+    void bite(){
+        System.out.println("I want to bite you, plz can i ?");
+    }
+}
+
+class Human extends Monkey implements BasicAnimal{
+
+    public void eat(){
+        System.out.println("I am eating.");
+    }
+
+    public void sleep(){
+        System.out.println("I am sleeping.");
+    }
+}
+
+public class code_related_to_class {
+    public static void main(String[] args) {
+        Monkey h1 = new Human();//polymorphism
+        h1.jump();
+        h1.bite();
+
+        //h1.eat(); --> Not Allowed
+        //h1.sleep(); --> Not Allowed
+        //These two methods can not be implemented because the reference is of Monkey class and these methods are not present in monkey class
+    }
+}
+
+ */
+
+
+
+
+
+
+//Create an interface TVRemote and use it to inherit another interface SmartTVRemote.
+//Create a class TV which implements SmartTVRemote interface
+
+interface TVRemote {
+    void powerOn();
+    void powerOff();
+}
+
+interface SmartTVRemote extends TVRemote {
+    void openYouTube();
+    void openNetflix();
+}
+
+class TV implements TVRemote,SmartTVRemote{
+
+    public void powerOn(){
+        System.out.println("TV is starting now.");
+    }
+
+    public void openYouTube(){
+        System.out.println("Opening Youtube");
+    }
+
+    public void openNetflix(){
+        System.out.println("Opening Netflix.");
+    }
+
+    public void powerOff(){
+        System.out.println("TV wil shut down in 5 seconds.");
+    }
+
+}
+
+public class code_related_to_class {
+    public static void main(String[] args) {
+
+        TV t = new TV();
+
+        t.powerOn();
+        t.openYouTube();
+        t.openNetflix();
+        t.powerOff();
+    }
+}
+
+
