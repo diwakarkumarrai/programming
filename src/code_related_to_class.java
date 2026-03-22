@@ -550,7 +550,7 @@ public class code_related_to_class {
 
  */
 
-
+/*
 
 
 //Code to show the concepts of interfaces
@@ -612,5 +612,76 @@ public class code_related_to_class {
         //Interface can have default and static methods (Java 8+).
         //Interface supports abstraction (100%).
         //Interface helps in loose coupling and better design.gi
+    }
+}
+
+ */
+
+
+
+//code of interface show the uses of default method and abstract method and private method
+
+interface Camera{
+    void takingSnap();
+    void recordVideo();
+    private void greet(){
+        System.out.println("hello! Camera on");
+    }//Private method
+    default void record4kVideo (){
+        greet();//uses of private method inside interface
+        System.out.println("Recording 4k video.");
+    }
+}
+
+interface WiFi{
+    String[] networkList();
+    void connectToNetwork(String network);
+}
+
+class MyCellPhone{
+
+    public void callNumber(long number){
+        System.out.println("calling number "+ number);
+    }
+
+    public void pickCall(){
+        System.out.println("Connecting ....");
+    }
+
+}
+
+class SmartPhone extends MyCellPhone implements WiFi , Camera {
+    public void takingSnap(){
+        System.out.println("Snap is taken and saved in gallery.");
+    }
+
+    public void recordVideo(){
+        System.out.println("Video is recording.");
+    }
+    public String[] networkList(){
+        System.out.println("Getting network list ....");
+        String[] networkList = {"Diwakar5g","CgcBlock1","aman4g"};
+        return networkList;
+    }
+
+    public void connectToNetwork(String network){
+        System.out.println("Connecting to "+ network);
+    }
+}
+public class code_related_to_class {
+    public static void main(String[] args) {
+        SmartPhone s1 = new SmartPhone();
+
+        String[] arr = s1.networkList();
+        for(String network : arr){
+            System.out.println(network);
+        }
+        s1.connectToNetwork("Diwakar5g");
+        s1.recordVideo();
+        s1.takingSnap();
+        s1.record4kVideo();//Default method calling without overriding in SmartPhone class
+        s1.callNumber(9128248607L);
+        s1.pickCall();
+
     }
 }
