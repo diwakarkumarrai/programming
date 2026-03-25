@@ -170,12 +170,14 @@ public class LibraryManagementSystem {
                     l1.showIssuedBooks();
                     break;
                 case 6:
+                    sc.close();
                     return;
             }
 
 
 
-
         }
+
     }
+
 }
