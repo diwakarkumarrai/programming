@@ -29,6 +29,7 @@ public class FactorialUsingRecursion {
 
 
  */
+/*
 class Palindrome {
 
     // Recursive function to reverse number
@@ -48,6 +49,28 @@ class Palindrome {
             System.out.println("Palindrome");
         } else {
             System.out.println("Not Palindrome");
+        }
+    }
+}
+
+ */
+class Fibonacci {
+
+    // Recursive function
+    static int fib(int n) {
+        // Base conditions
+        if (n == 0) return 0;
+        if (n == 1) return 1;
+
+        // Recursive call
+        return fib(n - 1) + fib(n - 2);
+    }
+
+    public static void main(String[] args) {
+        int n = 6; // number of terms
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(fib(i) + " ");
         }
     }
 }
