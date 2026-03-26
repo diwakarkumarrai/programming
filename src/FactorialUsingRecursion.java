@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+/*
 public class FactorialUsingRecursion {
 
     public static long factorial(int n) {
@@ -26,3 +26,28 @@ public class FactorialUsingRecursion {
     }
 }
 
+
+
+ */
+class Palindrome {
+
+    // Recursive function to reverse number
+    static int reverse(int n, int rev) {
+        if (n == 0) {
+            return rev;
+        }
+        return reverse(n / 10, rev * 10 + n % 10);
+    }
+
+    public static void main(String[] args) {
+        int num = 222; // change number here
+
+        int reversed = reverse(num, 0);
+
+        if (num == reversed) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not Palindrome");
+        }
+    }
+}
