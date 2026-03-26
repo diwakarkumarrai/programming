@@ -130,7 +130,12 @@ public class LibraryManagementSystem {
         Scanner sc = new Scanner(System.in);
         Library l1 = new Library();
         while (true) {
-            System.out.println("Enter 1 for add books , 2 for return books , 3 for the issue book , 4 for the Available book list , 5 for issued book list , and 6 for Exit");
+            System.out.println("Enter 1 for add books");
+            System.out.println("Enter 2 for return books");
+            System.out.println("Enter 3 for the issue book ");
+            System.out.println("Enter 4 for the Available book list");
+            System.out.println("Enter 5 for issued book list");
+            System.out.println("Enter 6 for Exit");
             int choice = sc.nextInt();
             switch (choice) {
                 case 1:
