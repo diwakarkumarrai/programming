@@ -54,6 +54,8 @@ class Palindrome {
 }
 
  */
+
+/*
 class Fibonacci {
 
     // Recursive function
@@ -72,5 +74,31 @@ class Fibonacci {
         for (int i = 0; i < n; i++) {
             System.out.print(fib(i) + " ");
         }
+    }
+}
+
+ */
+class MaxInArray {
+
+    // Recursive function to find maximum
+    static int findMax(int[] arr, int n) {
+        // Base condition
+        if (n == 1) {
+            return arr[0];
+        }
+
+        // Recursive call
+        int maxOfRest = findMax(arr, n - 1);
+
+        // Compare last element with max of remaining
+        return Math.max(arr[n - 1], maxOfRest);
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {10, 45, 23, 67, 12};
+
+        int max = findMax(arr, arr.length);
+
+        System.out.println("Greatest element: " + max);
     }
 }
