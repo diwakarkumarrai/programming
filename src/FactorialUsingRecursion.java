@@ -106,6 +106,7 @@ class MaxInArray {
 
  */
 
+/*
 class PalindromeCheck {
 
     static boolean isPalindrome(String str, int start, int end) {
@@ -131,5 +132,32 @@ class PalindromeCheck {
         } else {
             System.out.println("Not Palindrome");
         }
+    }
+}
+
+ */
+
+class TowerOfHanoi {
+
+    static void hanoi(int n, char source, char helper, char destination) {
+        // Base condition
+        if (n == 1) {
+            System.out.println("Move disk 1 from " + source + " to " + destination);
+            return;
+        }
+
+        // Step 1: Move n-1 disks from source → helper
+        hanoi(n - 1, source, destination, helper);
+
+        // Step 2: Move nth disk from source → destination
+        System.out.println("Move disk " + n + " from " + source + " to " + destination);
+
+        // Step 3: Move n-1 disks from helper → destination
+        hanoi(n - 1, helper, source, destination);
+    }
+
+    public static void main(String[] args) {
+        int n = 3;
+        hanoi(n, 'A', 'B', 'C');
     }
 }
