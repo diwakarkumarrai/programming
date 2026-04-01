@@ -136,6 +136,7 @@ class PalindromeCheck {
 }
 
  */
+/*
 
 class TowerOfHanoi {
 
@@ -161,3 +162,9 @@ class TowerOfHanoi {
         hanoi(n, 'A', 'B', 'C');
     }
 }
+
+ */
+
+
+
+
