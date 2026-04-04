@@ -145,7 +145,7 @@ public class java_array_question {
          */
 
 
-
+/*
 
 
                 String str1 = "listen";
@@ -173,3 +173,32 @@ public class java_array_question {
         }
 
 
+
+
+ */
+
+
+        class Subsets {
+
+            static void printSubsets(String str, String current) {
+
+                // Base condition
+                if (str.length() == 0) {
+                    System.out.println(current);
+                    return;
+                }
+
+                // Include current character
+                printSubsets(str.substring(1), current + str.charAt(0));
+
+                // Exclude current character
+                printSubsets(str.substring(1), current);
+            }
+
+            public static void main(String[] args) {
+                String str = "abc";
+                printSubsets(str, "");
+            }
+        }
+    }
+}
