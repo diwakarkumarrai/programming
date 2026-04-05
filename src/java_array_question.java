@@ -177,7 +177,7 @@ public class java_array_question {
 
  */
 
-
+/*
         class Subsets {
 
             static void printSubsets(String str, String current) {
@@ -198,6 +198,30 @@ public class java_array_question {
             public static void main(String[] args) {
                 String str = "abc";
                 printSubsets(str, "");
+            }
+        }
+    }
+}
+
+ */
+
+
+        class FirstNonRepeating {
+            public static char find(String str) {
+                HashMap<Character, Integer> map = new HashMap<>();
+
+                for (char c : str.toCharArray())
+                    map.put(c, map.getOrDefault(c, 0) + 1);
+
+                for (char c : str.toCharArray())
+                    if (map.get(c) == 1)
+                        return c;
+
+                return '_';
+            }
+
+            public static void main(String[] args) {
+                System.out.println(find("aabbcde")); // c
             }
         }
     }
