@@ -127,6 +127,7 @@ class Library {
 
 public class LibraryManagementSystem {
     public static void main(String[] args) {
+        System.out.println("WELCOME! To Library");
         Scanner sc = new Scanner(System.in);
         Library l1 = new Library();
         while (true) {
