@@ -26,7 +26,7 @@ public class Error_ExceptionDemo {
 
  */
 
-
+/*
 //using try and catch block to handle exception
 public class Error_ExceptionDemo{
     public static void main(String[] args) {
@@ -47,5 +47,79 @@ public class Error_ExceptionDemo{
        }
 
         System.out.println("End of the program");
+    }
+}
+
+ */
+
+
+
+/*
+// Handling specific exception in java
+public class Error_ExceptionDemo {
+    public static void main(String[] args) {
+        int[] marks = {56, 79, 87};
+
+        java.util.Scanner sc = new java.util.Scanner(System.in);
+        System.out.println("Enter the array index: ");
+        int ind = sc.nextInt();
+
+        System.out.println("Enter the number through you want to divide the value at the chosen array index: ");
+        int number = sc.nextInt();
+
+        try{
+            System.out.println("You have chosen the array index "+ind+" and the value on this index is "+marks[ind]);
+            System.out.println("The value of array-value/number is: "+ marks[ind]/number);
+        }
+        catch(ArithmeticException e){
+            System.out.println("Some Exception is occurred:");
+            System.out.println(e);
+        }
+        catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Some Exception is occured:");
+            System.out.println(e);
+        }
+        catch(Exception e){
+            System.out.println("Some Exception occurred:");
+            System.out.println(e);
+        }
+        finally {
+            System.out.println("You can restart the game and give correct input! if exception is occurred");
+        }
+
+        System.out.println("End of the program!!!");
+
+    }
+}
+
+ */
+
+
+//Nested try - catch block
+public class Error_ExceptionDemo {
+    public static void main(String[] args) {
+        int[] marks = {30, 40, 50};
+        java.util.Scanner sc = new java.util.Scanner(System.in);
+        boolean flag = true;
+        while (flag) {
+            System.out.println("Enter the index number: ");
+            int ind = sc.nextInt();
+
+            try{
+                System.out.println("Now we are checking that the entered index value is in array bound or not: ");
+                try{
+                    System.out.println(marks[ind]);
+                    System.out.println("This index is in array bound and the value at this index is written above.");
+                    flag = false;
+                }
+                catch(ArrayIndexOutOfBoundsException e){
+                    System.out.println("Sorry this index is out of bound");
+                    System.out.println("Exception in level 2");
+                }
+            }
+            catch (Exception e){
+                System.out.println("Exception in level 1");
+            }
+        }
     }
 }
