@@ -95,6 +95,7 @@ public class Error_ExceptionDemo {
  */
 
 
+/*
 //Nested try - catch block
 public class Error_ExceptionDemo {
     public static void main(String[] args) {
@@ -120,6 +121,48 @@ public class Error_ExceptionDemo {
             catch (Exception e){
                 System.out.println("Exception in level 1");
             }
+        }
+    }
+}
+
+ */
+
+
+class My_Exception extends Exception{
+    My_Exception(String message){
+        super(message);
+    }
+    @Override
+    public String toString(){
+        return "OhhNo!: "+ super.getMessage();
+    }
+    public String getMessage(){
+        return "Error: "+ super.getMessage();
+    }
+
+
+}
+
+public class Error_ExceptionDemo {
+    static void CheckAge(int age) throws My_Exception{
+        if (age < 18) {
+            throw new My_Exception("You are not eligible to vote");
+        } else {
+            System.out.println("You are eligible to Vote");
+        }
+    }
+
+
+    public static void main(String[] args) {
+        java.util.Scanner sc = new java.util.Scanner(System.in);
+        System.out.println("Enter your age: ");
+        int age = sc.nextInt();
+        try {
+            CheckAge(age);
+        } catch (My_Exception e) {
+            System.out.println(e);// This is from toString class
+           System.out.println(e.getMessage());// This is from getMessage class
+           // e.printStackTrace();
         }
     }
 }
