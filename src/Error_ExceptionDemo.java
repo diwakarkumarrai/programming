@@ -162,7 +162,7 @@ public class Error_ExceptionDemo {
         } catch (My_Exception e) {
             System.out.println(e);// This is from toString class
            System.out.println(e.getMessage());// This is from getMessage class
-           // e.printStackTrace();
+           e.printStackTrace();// This give detailed information about error
         }
     }
 }
