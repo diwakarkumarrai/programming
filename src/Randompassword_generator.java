@@ -1,6 +1,6 @@
 import java.security.SecureRandom;
 
-public class RandomPasswordGenerator {
+public class Randompassword_generator {
 
     private static final String UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static final String LOWER = "abcdefghijklmnopqrstuvwxyz";
