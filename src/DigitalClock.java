@@ -74,9 +74,8 @@ public class DigitalClock{
                 String mm = String.format("%02d", minute);
                 String ss = String.format("%02d", second);
                 // This line overwrite the previous output
-                System.out.print("\r" + hh + ":" + mm + ":" + ss + " " + period);
-                //System.out.flush();
-                //System.out.println(hh + ":" + mm + ":" + ss + " " + period);
+                System.out.print("\r" + hh + ":" + mm + ":" + ss + " " + period);//-->/r is carriage return , it is a type of escape character it sends your cursor in the beginning of the same line
+
             }
             catch(Exception e){
                 System.out.println("Error in updating clock"+e.getMessage());
