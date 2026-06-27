@@ -22,8 +22,9 @@ public class ArmstrongNumber {
 
 
 
+/*
 // This code is valid for finding only 3-digit integer number that it is Armstrong or not
-public class ArmstrongNumber {
+public class Armstrong_and_prime {
 
     public static boolean isArmstrong(int n) {
         int count = 0;
@@ -45,7 +46,7 @@ public class ArmstrongNumber {
             Requires casting to int
             Not ideal for integer-based problems
             Also it is slower than loop overall reduce performance
-            */
+
 
             // Manual power calculation
             int power =1;
@@ -66,6 +67,40 @@ public class ArmstrongNumber {
        }
     }
 }
+*/
+
+// Prime Number Code
+
+public class Armstrong_and_Prime {
+    public static boolean isPrime(int n) {
+
+        if (n <= 1) return false;
+
+        int c = 2;
+        while (c * c <= n) {
+            if (n % c == 0) {
+                return false;
+            }
+            c++;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+
+        for (int i = 0; i < 1000; i++) {
+            if (isPrime(i)) {
+                System.out.println(i);
+            }
+
+        }
+
+    }
+}
+
+
+
+
 
 
 
