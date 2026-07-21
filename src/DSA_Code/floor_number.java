@@ -27,7 +27,7 @@ public class floor_number {
      }
 
     public static void main(String[] args) {
-        int [] arr = {6,7,5,3};
-        System.out.println("The floor value of the given target is "+find_target(arr,6));
+        int [] arr = {7,6,5,3};
+        System.out.println("The floor value of the given target is "+find_target(arr, Integer.MAX_VALUE));
     }
 }
