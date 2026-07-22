@@ -19,8 +19,8 @@ public class infiniteArrayIndexFinder {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[1000];
-        for (int i = 0; i < 1000; i++) {
+        int[] arr = new int[100000];
+        for (int i = 0; i < 100000; i++) {
             arr[i] = i + 1;  // values from 1 to 50
         }
         System.out.println(searchTarget(arr,510));
